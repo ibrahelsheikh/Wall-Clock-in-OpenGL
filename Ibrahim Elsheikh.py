@@ -29,7 +29,7 @@ def circle(r, R, G, B):
         y = r * sin(ang * pi * .1 / 180)  # pi / 180 from angle to rad
         glVertex2d(x, y)
     glEnd()
-    glFlush()
+    # glutSwapBuffers()
 
 
 def clock_line(r1, r2, angle):
@@ -42,12 +42,12 @@ def clock_line(r1, r2, angle):
         y1 = r1 * sin(ang * pi / 180)
         x2 = r2 * cos(ang * pi / 180)
         y2 = r2 * sin(ang * pi / 180)
-        glColor3d(0, 1, 0)
+        glColor3d(.73, .76, .95)
         glBegin(GL_LINES)
         glVertex2d(x1, y1)
         glVertex2d(x2, y2)
         glEnd()
-        glFlush()
+        # glutSwapBuffers()
 
 
 def pointer():
@@ -63,46 +63,48 @@ def pointer():
     ang_sec = -int(current_time_sec) * 6
     ang_min = -int(current_time_min) * 6
     ang_hour = -int(current_time_hour) * 30
-    ####################################################################
-    #                 sec poniter
-    ####################################################################
+
+    ##############################################
+    # sec poniter
+    ##############################################
     glLoadIdentity()
     glLineWidth(1)
-    glColor3d(0, 0, 1)
+    glColor3d(.37, .49, .85)
     glRotatef(ang_sec, 0, 0, 1)
     glBegin(GL_LINES)
     glVertex2d(0, 0)  # 2 = coordL , d = float point NOT DIMENSION
     glVertex2d(0, 0.85)
     glEnd()
-    glFlush()
 
+    ###############################################
     # min Pointer
+    ###############################################
 
     glLoadIdentity()
     glLineWidth(5)
-    glColor3d(1, 0, 0)
+    glColor3d(.95, .68, .16)
     glRotate(ang_min, 0, 0, 1)
     glBegin(GL_LINES)
     glVertex2d(0, 0)  # 2 = coord   L , d = float point NOT DIMENSION
     glVertex2d(0, .6)
     glEnd()
-    glFlush()
 
-    #
+    ###############################################
+    # hour Pointer
+    ###############################################
     glLoadIdentity()
     glLineWidth(7)
-    glColor3d(0, 1, 0)
+    glColor3d(.75, .42, .25)
     glRotate(ang_hour, 0, 0, 1)
     glBegin(GL_LINES)
     glVertex2d(0, 0)  # 2 = coordL , d = float point NOT DIMENSION
     glVertex2d(0, 0.80)
 
     glEnd()
-    glFlush()
+    glutSwapBuffers()
 
 
 def draw_text(string, x, y):
-    glLoadIdentity()
     glLineWidth(1)
     glColor(1, 1, 1)
     glPushMatrix()
@@ -113,7 +115,6 @@ def draw_text(string, x, y):
     for c in string:
         glutStrokeCharacter(GLUT_STROKE_ROMAN, c)
     glPopMatrix()
-    glFlush()
 
 
 def initGL():
@@ -131,7 +132,7 @@ def draw():
     initGL()
     glClearColor(0.0, 0.0, 0.0, 1)
 
-    circle(.98, 0.5, 0.3, 0.92)  # No REvision need
+    circle(.98, 0.37, 0.56, 0.85)  # No REvision need
     circle(.95, 0, 0, 0)  # No Need  REvision need
     r4 = 0.83
     for ang in range(450, 90, -30):
@@ -157,7 +158,7 @@ def mainfunc():
     glutInit()
     glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT)  # Set the window's initial width & height #
     glutInitWindowPosition(300, 50)  # position
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
     glutCreateWindow(b"Wall clock")
     initGL()
     glutDisplayFunc(draw)
