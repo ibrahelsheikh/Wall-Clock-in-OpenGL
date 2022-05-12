@@ -81,7 +81,7 @@ def pointer():
     ###############################################
 
     glLoadIdentity()
-    glLineWidth(5)
+    glLineWidth(7)
     glColor3d(.95, .68, .16)
     glRotate(ang_min, 0, 0, 1)
     glBegin(GL_LINES)
@@ -93,7 +93,7 @@ def pointer():
     # hour Pointer
     ###############################################
     glLoadIdentity()
-    glLineWidth(7)
+    glLineWidth(5)
     glColor3d(.75, .42, .25)
     glRotate(ang_hour, 0, 0, 1)
     glBegin(GL_LINES)
