@@ -81,19 +81,19 @@ def pointer():
     ###############################################
 
     glLoadIdentity()
-    glLineWidth(7)
+    glLineWidth(5)
     glColor3d(.95, .68, .16)
     glRotate(ang_min, 0, 0, 1)
     glBegin(GL_LINES)
     glVertex2d(0, 0)  # 2 = coord   L , d = float point NOT DIMENSION
-    glVertex2d(0, .6)
+    glVertex2d(0, .75)
     glEnd()
 
     ###############################################
     # hour Pointer
     ###############################################
     glLoadIdentity()
-    glLineWidth(5)
+    glLineWidth(8)
     glColor3d(.75, .42, .25)
     glRotate(ang_hour, 0, 0, 1)
     glBegin(GL_LINES)
