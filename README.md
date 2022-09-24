@@ -5,7 +5,6 @@ Simple Clock in OpenGL
 
 ```
 OpenGL
-pip install datatime
 ```
 
 show realtime from system 
