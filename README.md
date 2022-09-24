@@ -1,9 +1,13 @@
 # Wall-Clock-in-OpenGL
 Simple Clock in OpenGL  
 
-Work with your System time 
+## Installation required
 
-using 
+```
+OpenGL
+pip install datatime
+```
 
+show realtime from system 
 
-
+## output 
