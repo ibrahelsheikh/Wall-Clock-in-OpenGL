@@ -24,9 +24,9 @@ def circle(r, R, G, B):
     glBegin(GL_POLYGON)  # connect them as lines and close the loop
     resolution = 1
 
-    for ang in range(0, 3600, resolution):
-        x = r * cos(ang * pi * .1 / 180)  # pi / 180 from angle to rad
-        y = r * sin(ang * pi * .1 / 180)  # pi / 180 from angle to rad
+    for ang in range(0, 360, resolution):
+        x = r * cos(ang * pi / 180)  # pi / 180 from angle to rad
+        y = r * sin(ang * pi / 180)  # pi / 180 from angle to rad
         glVertex2d(x, y)
     glEnd()
     # glutSwapBuffers()

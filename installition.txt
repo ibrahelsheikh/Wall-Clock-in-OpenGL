@@ -1,0 +1,57 @@
+steps of install 
+
+
+one:: install miniconda 
+
+>> https://docs.conda.io/en/latest/miniconda.html
+            
+           # Mark on the (path) during installation
+
+
+
+two:: install python 9.8.
+
+>> https://www.python.org/downloads/
+
+           
+
+
+Three:: install IDE
+     
+            i- VS code 
+            >> https://code.visualstudio.com/
+
+            ii- Pycharm 
+            >> https://www.jetbrains.com/pycharm/download/#section=windows
+
+
+
+four::  Install packages 
+    
+            i- PyOpenGL 
+            ii-PyOpenGL accelerate 
+            >> https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+            iii-pygame
+
+            # Using cmd 
+            >> pip install pygame
+
+            iv- scipy
+
+            # Using cmd 
+            >> pip install scipy
+
+            v- numpy
+
+            # Using cmd 
+            >> pip install numpy
+
+
+five:: check if the version of python 
+
+# Using cmd 
+>> where python 
+# Use the same version of python in PyOpenGL
+
+six:: check if IDE using the miniconda
